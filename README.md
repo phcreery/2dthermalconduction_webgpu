@@ -7,3 +7,4 @@ Rendition of https://www.mecanicascience.fr/simulationview/10&thermal_conduction
 - https://www.mecanicascience.fr/simulationview/10&thermal_conduction
 - https://github.com/vini-fda/heat-wgpu/tree/master
 - https://github.com/piellardj/water-webgpu
+- https://webgpufundamentals.org/
