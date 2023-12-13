@@ -7,7 +7,7 @@
 import { onMounted, ref } from 'vue'
 import { Simulator } from './ThermalConduction/Simulator'
 
-let simulation = null
+let simulation: any = null
 let fps = ref(0)
 async function startProgram() {
   // Create program

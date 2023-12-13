@@ -115,29 +115,16 @@ export class Simulator {
     // });
 
     // Colors as R, G, B from hot to cold
+    // prettier-ignore
     let colors = [
       0.0, // First value is color count
-      0.0,
-      0.0,
-      0.0,
-      0.2,
-      0.2,
-      0.5,
-      0.4,
-      0.6,
-      0.8,
-      0.8,
-      0.9,
-      0.9,
-      1.0,
-      0.8,
-      0.5,
-      0.9,
-      0.3,
-      0.2,
-      0.6,
-      0.0,
-      0.0,
+      0.0, 0.0, 0.0, // Black
+      0.2, 0.2, 0.5, // Blue
+      0.4, 0.6, 0.8, // Light blue
+      0.8, 0.9, 0.9, // White
+      1.0, 0.8, 0.5, // Yellow
+      0.9, 0.3, 0.2, // Red
+      0.6, 0.0, 0.0, // Dark red
     ]
     colors[0] = Math.round((colors.length - 1) / 3)
 

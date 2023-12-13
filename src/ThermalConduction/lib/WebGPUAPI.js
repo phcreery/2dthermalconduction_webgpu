@@ -213,7 +213,7 @@ export class WebGPUAPI {
         }
       }
 
-      // Instanciate them
+      // Instantiate them
       bindGroupsLayouts.push(this.device.createBindGroupLayout({ entries: groupLayout }))
       bindGroups.push(
         this.device.createBindGroup({
@@ -247,7 +247,7 @@ export class WebGPUAPI {
         {
           shaderLocation: 1, // [[location(1)]]
           offset: 0,
-          format: 'float32x3',
+          format: 'float32x3', //
         },
       ],
       arrayStride: 4 * 3, // sizeof(float) * 3
@@ -289,16 +289,26 @@ export class WebGPUAPI {
     // Set buffers
     pipeline.graphicsBuffers = {
       position: this.createBuffer(
+        // prettier-ignore
         new Float32Array([
           // Vertices
-          1.0, -1.0, 0.0, -1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, 1.0, 0.0,
+           1.0, -1.0, 0.0, 
+          -1.0, -1.0, 0.0, 
+           1.0,  1.0, 0.0, 
+          -1.0,  1.0, 0.0,
         ]),
         GPUBufferUsage.VERTEX
       ),
       color: this.createBuffer(
+        // prettier-ignore
         new Float32Array([
           // Colors
-          1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+          1.0, 1.0, 1.0, 
+          1.0, 1.0, 1.0, 
+          1.0, 1.0, 1.0, 
+          1.0, 1.0, 1.0, 
+          1.0, 1.0, 1.0, 
+          1.0, 1.0, 1.0,
         ]),
         GPUBufferUsage.VERTEX
       ),
